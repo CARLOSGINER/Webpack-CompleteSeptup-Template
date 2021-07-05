@@ -1,0 +1,42 @@
+$main-color:rgb(255, 255, 255);
+
+body{
+    margin:0;
+    padding: 0;
+    background-color: rgb(34, 35, 54);
+
+}
+
+p{
+    text-align: center;
+    font-family: serif;
+    text-transform: uppercase;
+    color:rgb(41, 247, 219);
+}
+
+h1{
+    text-align: center;
+    color:$main-color;
+    font-size: 1.5rem;
+    font-family:sans-serif;
+    text-transform: uppercase;
+}
+
+.box {
+    position: relative;
+    top:150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    background-color: $main-color;
+}
+
+.box-child{
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(23, 178, 206);
+}
