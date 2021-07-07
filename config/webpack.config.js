@@ -15,7 +15,7 @@ if (!devMode) {
 
   plugins.push(
     new HtmlWebpackPlugin({
-      template: "./src/template.html",
+      template: path.join(__dirname, "/../src/template.html"),
       filename: "index.html",
     })
   );
@@ -24,7 +24,7 @@ if (!devMode) {
 } else {
   plugins.push(
     new HtmlWebpackPlugin({
-      template: "./src/template.html",
+      template: path.join(__dirname, "/../src/template.html"),
       filename: "index.html",
     })
   );
@@ -35,19 +35,19 @@ if (!devMode) {
 module.exports = {
 
   entry: [
-    "./src/index.js",
+    path.join(__dirname, "../src/index.js"),
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/dev-server',
   ], 
 
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.join(__dirname, "../dist"),
     filename: "bundle.js",
   },
 
   devServer: {
     port: 8080,
-    contentBase: path.resolve(__dirname, "src"),
+    contentBase: path.join(__dirname, "../src"),
     watchContentBase: true,
     open: true,
     hot:true,
